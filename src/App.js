@@ -10,7 +10,7 @@ function App() {
   // Utilizando DOM Anchor Object para download do curriculo em pdf
   const downloadButton = () =>{
     //Atribui o caminho do arquivo
-    const pdfPath = 'Curriculo.pdf';
+    const pdfPath = 'Currículo.pdf';
     //Cria um novo elemento ancora<a> e vincula na constante link
     const link = document.createElement("a");
     //Atribui ao href do elemento ancora<a> com o path
@@ -24,8 +24,35 @@ function App() {
     //Remove o elemento ancora<a> do documento
     document.body.removeChild(link);
   }
+
+  const ArrowIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+    </svg>
+  )
+
+  const scrollToSection = () => {
+    document.getElementById('Sobre').scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <body className='bg-white-400'> 
+    <body className='bg-white-400'>
+      <div className="relative h-screen overflow-hidden">
+        <img
+          src="bg.jpg"
+          alt="img-pc"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
+
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+          <h1 className="text-5xl font-bold mb-8">More human than human</h1>
+          <h2 className="text-3xl font-bold mb-8">Bem-Vindo ao Meu Portfolio</h2>
+          <div className='animate-bounce w-12 h-12 cursor-pointer' onClick={scrollToSection}>
+            <ArrowIcon />
+          </div>
+
+        </div>
+      </div> 
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="http://localhost:3000/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -67,7 +94,7 @@ function App() {
             <div className='flex justify-center'>
               <img className="rounded-full w-96 h-96" src="Eu.jpeg" alt="me"></img>
             </div>
-            <div className='space-y-4 justify-center'>
+            <div className='space-y-4 '>
               <p className='font-bold mb-3 text-lg text-black-700 md:text-xl dark:text-black-400'>Desenvolvedor Full Stack, Bacharel em Ciência da Computação pelo Mackenzie, com amplo conhecimento em Python, Django, Java, C#, JavaScript, TypeScript, HTML, CSS, Angular, Vue, Git e bancos de dados</p>
               <p className='text-black-700 dark:text-black-400'>Tenho experiência prática em diversas tecnologias e ferramentas, como C, C++, SQL, Web Services, Node.js e microsserviços. Durante minha graduação, desenvolvi projetos utilizando metodologias ágeis, como SCRUM, o que me proporcionou habilidades em gerenciamento de projetos e trabalho em equipe.
               Disponho meu tempo para aprender novas tecnologias e aplicar esse conhecimento em projetos pessoais, sempre buscando aprimorar minhas habilidades e acompanhar as tendências do mercado.</p>
@@ -76,7 +103,7 @@ function App() {
                   Baixar CV 
                   <FontAwesomeIcon icon={faDownload} className="ml-2" />
                 </button> */}
-                <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                <button onClick={downloadButton} className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
                 Baixar CV 
                 <FontAwesomeIcon icon={faDownload} className="ml-2" />
                 </button>
@@ -85,7 +112,7 @@ function App() {
           </div>
         </section>
 
-        <section id='Formacao' className='mx-auto mt-16'>
+        <section id='Formacao' className='container mx-auto mt-16'>
             <div className='text-center'>
               <h2 className='text-3x1 font-bold'>Formação</h2>
               <p className='text-gray-600'>Minha formação</p>
@@ -192,15 +219,44 @@ function App() {
             </div>
           </section>
 
-          <section id='Projetos'className='mx-auto mt-16'>
+          <section id='Projetos'className='container mx-auto mt-16'>
             <div className='text-center'>
               <h2 className='text-3x1 font-bold'>Projetos</h2>
-              <p className='text-gray-600'>Projetos</p>
+              <p className='text-gray-600'>Alguns projetos que fiz para fortalecer meu conhecimento</p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
+                <div className='flex justify-center'>
+                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="Eu.jpeg" alt="me"></img>
+                </div>
+                <div className=''>
+                  <div>Berserk App</div>
+                  <div>JavaScrip, HTML, CSS, Flask, Vue</div>
+                </div>
 
-              <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-80 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
-              Baixar CV 
-              <FontAwesomeIcon icon={faDownload} className="ml-2" />
-              </button>
+              </div>
+
+              <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
+                <div className='flex justify-center'>
+                  <img className=" rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="Eu.jpeg" alt="me"></img>
+                </div>
+                <div className=''>
+                  <div>Game Rental Store</div>
+                  <div>JavaScript, HTML, CSS, Django, Python</div>
+                </div>
+              </div>
+
+              <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
+                <div className='flex justify-center'>
+                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="Eu.jpeg" alt="me"></img>
+                </div>
+                <div className=''>
+                  <div>MVC System Project</div>
+                  <div>JavaScript, HTML, CSSC #</div>
+                </div>
+              </div>
+
+
             </div>
           </section>
 
