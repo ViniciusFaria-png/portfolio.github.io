@@ -3,6 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Container } from 'postcss';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 
@@ -10,7 +11,7 @@ function App() {
   // Utilizando DOM Anchor Object para download do curriculo em pdf
   const downloadButton = () =>{
     //Atribui o caminho do arquivo
-    const pdfPath = 'Currículo.pdf';
+    const pdfPath = 'curriculo.pdf';
     //Cria um novo elemento ancora<a> e vincula na constante link
     const link = document.createElement("a");
     //Atribui ao href do elemento ancora<a> com o path
@@ -25,17 +26,23 @@ function App() {
     document.body.removeChild(link);
   }
 
-  const ArrowIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+
+  const ArrowDownIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-15">
       <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
     </svg>
   )
 
-  const scrollToSection = () => {
-    document.getElementById('Sobre').scrollIntoView({ behavior: 'smooth' });
-  };
+  const ArrowUpIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-15" style={{transform: "rotate(180deg)"}}>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+    </svg>
+  )
+
+
+  
   return (
-    <body className='bg-white-400'>
+    <body id='Home' className='bg-white-400'>
       <div className="relative h-screen overflow-hidden">
         <img
           src="bg.jpg"
@@ -47,34 +54,80 @@ function App() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-5xl font-bold mb-8">More human than human</h1>
           <h2 className="text-3xl font-bold mb-8">Bem-Vindo ao Meu Portfolio</h2>
-          <div className='animate-bounce w-12 h-12 cursor-pointer' onClick={scrollToSection}>
-            <ArrowIcon />
-          </div>
+          <ScrollLink to="Sobre" smooth={true} duration={500} className="animate-bounce w-12 h-12 cursor-pointer">
+            <ArrowDownIcon />
+          </ScrollLink>
+
 
         </div>
       </div> 
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-transparent dark:bg-transparent-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-transparent-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="http://localhost:3000/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="Logo.png" width="30" height="30" className="d-inline-block align-top" alt="vigaLogo"></img>
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vinícius Faria</span>
         </a>
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-transparent-800 md:dark:bg-gray-900 dark:border-transparent-700">
             <li>
-              <a href="#Sobre" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-purple-500" aria-current="page">Sobre</a>
+              <ScrollLink to="Sobre"
+                  smooth={true}
+                  duration={500}
+                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-purple-500"
+                  aria-current="page">
+                Sobre
+              </ScrollLink>
+              {/* <a href="#Sobre" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-purple-500" aria-current="page">
+                Sobre
+              </a> */}
             </li>
             <li>
-              <a href="#Formacao" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Formação</a>
+              <ScrollLink to="Formacao"
+                  smooth={true}
+                  duration={500}
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                Formação
+              </ScrollLink>
+              {/* <a href="#Formacao" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                Formação
+              </a> */}
             </li>
             <li>
-              <a href="#Skills" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Skills</a>
+              <ScrollLink to="Skills"
+                  smooth={true}
+                  duration={600}
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                Skills
+              </ScrollLink>
+              {/* <a href="#Skills" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                Skills
+              </a> */}
             </li>
             <li>
-              <a href="#Projetos" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projetos</a>
+              <ScrollLink to="Projetos"
+                  smooth={true}
+                  duration={700}
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                Projetos
+              </ScrollLink>
+              {/* <a href="#Projetos" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                Projetos
+              </a> */}
             </li>
             <li>
-              <a href="#Contato" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contato</a>
+              <ScrollLink to="Contato"
+                  smooth={true}
+                  duration={1000}
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                Contato
+              </ScrollLink>
+              {/* <a href="#Contato" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                Contato
+              </a> */}
             </li>
           </ul>
         </div>
@@ -82,12 +135,12 @@ function App() {
       </nav>
       <main className='pt-20' >
 
-        <section id='Home'>
+        {/* <section id='Home'>
           <p>
             oi
           </p>
 
-        </section>
+        </section> */}
 
         <section id='Sobre'  className='w-full mx-auto mt-16 bg-violet-100'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
@@ -267,6 +320,16 @@ function App() {
               <button></button>
             </div>
           </section>
+          <footer className='bg-gray-800 text-white py-4 text-center relative'>
+            <div className='container mx-auto'>
+              <ScrollLink to="Home" smooth={true} duration={500} className="animate-bounce w-12 h-12 cursor-pointer inline-block">
+                  <ArrowUpIcon />
+              </ScrollLink>
+              <p className='mt-4'></p>
+            </div>
+          </footer>
+            
+
       </main>
     </body>   
   );
