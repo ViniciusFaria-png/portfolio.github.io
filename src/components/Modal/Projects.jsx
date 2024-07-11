@@ -40,9 +40,9 @@ const Project = ({ title, details }) => {
           }
         }}
       >
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">{title}</h2>
         <button onClick={closeModal} className="absolute top-0 right-0 mt-2 mr-2 text-red-700">
-          ×
+            <i className="fa-solid fa-x transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150"></i>
         </button>
         <p>{details}</p>
       </ReactModal>

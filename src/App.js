@@ -33,15 +33,11 @@ function App() {
     document.body.removeChild(link);
   }
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
-    const openModal = () => {
-      setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-      setIsModalOpen(false);
-    };
+  const openModal = () => {
+    setModalOpen(true);
+  };
 
 
   const ArrowDownIcon = () => (
@@ -55,11 +51,11 @@ function App() {
       <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
     </svg>
   )
-
+  
 
   
   return (
-    <body id='Home' className='bg-white-400'>
+    <body id='Home' className='bg-slate-50'>
       
       <div className="relative h-screen overflow-hidden">
         <img
@@ -95,9 +91,6 @@ function App() {
                   aria-current="page">
                 Sobre
               </ScrollLink>
-              {/* <a href="#Sobre" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-purple-500" aria-current="page">
-                Sobre
-              </a> */}
             </li>
             <li>
               <ScrollLink to="Formacao"
@@ -107,9 +100,6 @@ function App() {
                 >
                 Formação
               </ScrollLink>
-              {/* <a href="#Formacao" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Formação
-              </a> */}
             </li>
             <li>
               <ScrollLink to="Skills"
@@ -119,9 +109,6 @@ function App() {
                 >
                 Skills
               </ScrollLink>
-              {/* <a href="#Skills" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Skills
-              </a> */}
             </li>
             <li>
               <ScrollLink to="Projetos"
@@ -131,9 +118,6 @@ function App() {
                 >
                 Projetos
               </ScrollLink>
-              {/* <a href="#Projetos" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Projetos
-              </a> */}
             </li>
             <li>
               <ScrollLink to="Contato"
@@ -143,9 +127,6 @@ function App() {
                 >
                 Contato
               </ScrollLink>
-              {/* <a href="#Contato" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Contato
-              </a> */}
             </li>
           </ul>
         </div>
@@ -153,27 +134,16 @@ function App() {
       </nav>
       <main>
 
-        {/* <section id='Home'>
-          <p>
-            oi
-          </p>
-
-        </section> */}
-
-        <section id='Sobre'  className='w-full mx-auto bg-violet-100'>
+        <section id='Sobre'  className='w-full mx-auto bg-slate-50'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
             <div className='flex justify-center'>
-              <img className="rounded-full w-96 h-96" src="Eu.jpeg" alt="me"></img>
+              <img className="rounded-full w-96 h-96 mt-5 mb-5" src="Eu.jpeg" alt="me"></img>
             </div>
             <div className='space-y-4 '>
               <p className='font-bold mb-3 text-lg text-black-700 md:text-xl dark:text-black-400'>Desenvolvedor Full Stack, Bacharel em Ciência da Computação pelo Mackenzie, com amplo conhecimento em Python, Django, Java, C#, JavaScript, TypeScript, HTML, CSS, Angular, Vue, Git e bancos de dados</p>
               <p className='text-black-700 dark:text-black-400'>Tenho experiência prática em diversas tecnologias e ferramentas, como C, C++, SQL, Web Services, Node.js e microsserviços. Durante minha graduação, desenvolvi projetos utilizando metodologias ágeis, como SCRUM, o que me proporcionou habilidades em gerenciamento de projetos e trabalho em equipe.
               Disponho meu tempo para aprender novas tecnologias e aplicar esse conhecimento em projetos pessoais, sempre buscando aprimorar minhas habilidades e acompanhar as tendências do mercado.</p>
               <div className='text-center'>
-                {/* <button onClick={downloadButton} className='relative inline-block px-4 py-2 border-2 border-purple-900 text-purple-500 rounded-lg overflow-hidden transition duration-300 ease-in-out hover:text-white hover:bg-purple-500 hover:border-purlpe-900 active:bg-violet-700 shadow-md'>
-                  Baixar CV 
-                  <FontAwesomeIcon icon={faDownload} className="ml-2" />
-                </button> */}
                 <button onClick={downloadButton} className='mx-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
                 Baixar CV 
                 <FontAwesomeIcon icon={faDownload} className="ml-2" />
@@ -181,9 +151,6 @@ function App() {
                 <ScrollLink to="Contato" smooth={true} duration={800} className='mx-10 relative inline-flex items-center justify-center p-0.5 mb-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md cursor-pointer'>
                   Contate-me
                 </ScrollLink>
-                {/* <button onClick={openModal} className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
-                Mais detalhes
-                </button> */}
 
                 <button onClick={openModal}>
                   <Project title={'Mais detalhes sobre mim'} details={<p>Sou apaixonado por tecnologia desde que ganhei meu primeiro computador, quando tinha cerca de 7 anos. Sempre tive muita curiosidade sobre esse mundo, 
@@ -237,7 +204,7 @@ function App() {
           </ReactModal>
         </> */}
 
-        <section id='Formacao' className='container mx-auto mt-16'>
+        <section id='Formacao' className='container mx-auto mt-16 bg-slate-50'>
             <div>
               <h2 className='text-3xl font-bold'>Formação Acadêmica</h2>
             </div>
@@ -284,12 +251,12 @@ function App() {
             </div>
           </section>
 
-          <section id='Skills'className='mx-auto mt-16 bg-violet-100'>
-            <div className='text-center'>
-              <h2 className='text-3x1 font-bold'>Skills</h2>
-              <p className='text-gray-600'>Skills</p>
+          <section id='Skills'className='container mx-auto mt-16 bg-slate-50'>
+            <div className='text-center my-7'>
+              <h2 className='text-3xl font-bold my-5'>Skills</h2>
+              <p className='text-gray-600 my-5'>Algumas habilidades que desenvolvi durante meus estudos</p>
               <div className='grid grid-cols-4 gap-4'>
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 rounded-lg px-4 py-2'>
+                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
                   <h3 className='font-bold mb-2'>Linguas</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Português</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -305,7 +272,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 rounded-lg px-4 py-2'>
+                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
                   <h3 className='font-bold mb-2'>Front end</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">HTML|CSS</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -329,7 +296,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 rounded-lg px-4 py-2'>
+                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
                   <h3 className='font-bold mb-2'>Back end</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Python</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -357,7 +324,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 rounded-lg px-4 py-2'>
+                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
                   <h3 className='font-bold mb-2'>Ferramentas</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Git|Github</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -384,56 +351,79 @@ function App() {
             </div>
           </section>
 
-          <section id='Projetos'className='container mx-auto mt-16'>
-            <div className='text-center'>
-              <h2 className='text-3x1 font-bold'>Projetos</h2>
-              <p className='text-gray-600'>Alguns projetos que fiz para fortalecer meu conhecimento</p>
+          <section id='Projetos'className='container mx-auto mt-16 bg-slate-50'>
+            <div className='text-center my-7'>
+              <h2 className='text-3xl font-bold my-5'>Projetos</h2>
+              <p className='text-gray-600'>Alguns projetos que ja desenvolvi para o fortalecimento das minhas habilidades</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
                 <div className='flex justify-center'>
-                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="Eu.jpeg" alt="me"></img>
+                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="BerserkApp.png" alt="me"></img>
                 </div>
-                <div className=''>
-                  <div>Berserk App</div>
+                <div className='text-center'>
+                  <div className='font-bold'>Berserk App</div>
                   <div>JavaScrip, HTML, CSS, Flask, Vue</div>
+                  <a href='https://github.com/ViniciusFaria-png/berserkApp' target='_blank'> 
+                    <button className='my-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                      Code
+                      <i class="fa-solid fa-code ml-2"></i>
+                    </button>
+                  </a>
                 </div>
-
               </div>
+              
 
               <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
                 <div className='flex justify-center'>
-                  <img className=" rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="Eu.jpeg" alt="me"></img>
+                  <img className=" rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="GameRental.png" alt="me"></img>
                 </div>
                 <div className=''>
-                  <div>Game Rental Store</div>
+                  <div className='font-bold'>Game Rental Store</div>
                   <div>JavaScript, HTML, CSS, Django, Python</div>
+                  <a href='https://github.com/ViniciusFaria-png/game-rental-store-django' target='_blank'> 
+                    <button className='my-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                      Code
+                      <i class="fa-solid fa-code ml-2"></i>
+                    </button>
+                  </a>
                 </div>
               </div>
 
               <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
                 <div className='flex justify-center'>
-                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="Eu.jpeg" alt="me"></img>
+                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="SalesMVC.png" alt="me"></img>
                 </div>
                 <div className=''>
-                  <div>MVC System Project</div>
+                  <div className='font-bold' >MVC System Project</div>
                   <div>JavaScript, HTML, CSSC #</div>
+                  <a href='https://github.com/ViniciusFaria-png/WebMvcSystem' target='_blank'> 
+                    <button className='my-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                      Code
+                      <i class="fa-solid fa-code ml-2"></i>
+                    </button>
+                  </a>
+                  
                 </div>
               </div>
-
-
+            </div>
+            <div className='text-center mt-5'>
+              <a href='https://github.com/ViniciusFaria-png' target='_blank'>
+                <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                  Mais Projetos 
+                </button>
+              </a>
             </div>
           </section>
 
-          <section id='Contato'className='mx-auto mt-16 bg-violet-100'>
-            <div className='text-center'>
-              <h2 className='text-3x1 font-bold'>Contato</h2>
-              <p className='text-gray-600'>Entre em Contato</p>
-            </div>
-            <div className='text-center'>
-            <a 
+          <section id='Contato'className='mx-auto mt-16 bg-slate-50'>
+            <div className='mt-5 mx-10 my-10'>
+              <h2 className='text-3xl font-bold my-5'>Contato</h2>
+              <p className='text-gray-600 my-5'>Deseja discutir sobre algum projeto ou apenas dizer um olá? entre em contato!!</p>
+              <p className='text-gray-600 my-5'>São Paulo, Brasil</p>
+              <a 
                 href='https://www.linkedin.com/in/viniciusrofifaria/' 
-                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-zinc-950' 
+                className='inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-zinc-950' 
                 target='_blank' 
                 rel='noopener noreferrer'
               >
@@ -441,15 +431,15 @@ function App() {
               </a>
               <a 
                 href='https://github.com/ViniciusFaria-png' 
-                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-gray-600 hover:bg-zinc-950' 
+                className='ml-1 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-gray-600 hover:bg-zinc-950' 
                 target='_blank' 
                 rel='noopener noreferrer'
               >
                 <i class="fa-brands fa-github"></i>
               </a>
               <a 
-                href='vinicius.f4ria@gmail.com' 
-                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-red-600 hover:bg-zinc-950' 
+                href='mailto:vinicius.f4ria@gmail.com' 
+                className='ml-1 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-red-600 hover:bg-zinc-950' 
                 target='_blank' 
                 rel='noopener noreferrer'
               >
@@ -457,7 +447,7 @@ function App() {
               </a>
               <a 
                 href='https://stackoverflow.com/users/19990372/viga' 
-                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-orange-600 hover:bg-zinc-950' 
+                className='ml-1 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-orange-600 hover:bg-zinc-950' 
                 target='_blank' 
                 rel='noopener noreferrer'
               >
@@ -465,15 +455,17 @@ function App() {
               </a>
               <a 
                 href='https://medium.com/@tioviga' 
-                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-zinc-600 hover:bg-zinc-950' 
+                className='ml-1 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-zinc-600 hover:bg-zinc-950' 
                 target='_blank' 
                 rel='noopener noreferrer'
               >
                 <i class="fa-brands fa-medium"></i>
               </a>
             </div>
+            <div className='text-center'>
+            </div>
           </section>
-          <footer className='bg-gray-800 text-white py-4 text-center relative'>
+          <footer className='bg-slate-800 text-white py-4 text-center relative'>
             <div className='container mx-auto'>
               <ScrollLink to="Home" smooth={true} duration={800} className="animate-bounce w-12 h-12 cursor-pointer inline-block">
                   <ArrowUpIcon />
