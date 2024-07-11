@@ -1,9 +1,16 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Container } from 'postcss';
 import { Link as ScrollLink } from 'react-scroll';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import ReactModal from 'react-modal';
+import Project from './components/Modal/Projects';
+
+ReactModal.setAppElement('#root');
+
+
 
 
 
@@ -26,6 +33,16 @@ function App() {
     document.body.removeChild(link);
   }
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+      setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
+
 
   const ArrowDownIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-15">
@@ -43,6 +60,7 @@ function App() {
   
   return (
     <body id='Home' className='bg-white-400'>
+      
       <div className="relative h-screen overflow-hidden">
         <img
           src="bg.jpg"
@@ -133,7 +151,7 @@ function App() {
         </div>
         </div>
       </nav>
-      <main className='pt-20' >
+      <main>
 
         {/* <section id='Home'>
           <p>
@@ -142,7 +160,7 @@ function App() {
 
         </section> */}
 
-        <section id='Sobre'  className='w-full mx-auto mt-16 bg-violet-100'>
+        <section id='Sobre'  className='w-full mx-auto bg-violet-100'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
             <div className='flex justify-center'>
               <img className="rounded-full w-96 h-96" src="Eu.jpeg" alt="me"></img>
@@ -156,19 +174,113 @@ function App() {
                   Baixar CV 
                   <FontAwesomeIcon icon={faDownload} className="ml-2" />
                 </button> */}
-                <button onClick={downloadButton} className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                <button onClick={downloadButton} className='mx-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
                 Baixar CV 
                 <FontAwesomeIcon icon={faDownload} className="ml-2" />
+                </button>
+                <ScrollLink to="Contato" smooth={true} duration={800} className='mx-10 relative inline-flex items-center justify-center p-0.5 mb-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md cursor-pointer'>
+                  Contate-me
+                </ScrollLink>
+                {/* <button onClick={openModal} className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md'>
+                Mais detalhes
+                </button> */}
+
+                <button onClick={openModal}>
+                  <Project title={'Mais detalhes sobre mim'} details={<p>Sou apaixonado por tecnologia desde que ganhei meu primeiro computador, quando tinha cerca de 7 anos. Sempre tive muita curiosidade sobre esse mundo, 
+                    sobre como era feito um computador e como as coisas funcionavam. Devido a isso, decidi seguir a carreira de tecnologia.
+                    Alguns hobbies que eu tenho, além da programação, são jogar videogames – jogo desde meus 5/6 anos e sempre amei todo esse universo. 
+                    Além disso, gosto muito de cinema e definitivamente sou o maior fã de Godzilla da minha cidade.
+                  </p>}>
+                  </Project>
                 </button>
               </div>
             </div>
           </div>
         </section>
 
+
+              
+        {/* <>
+          <ReactModal
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            contentLabel="Detalhes"
+            style={{
+              overlay: {
+                backgroundColor: 'rgba(0, 0, 0, 0.5)'
+              },
+              content: {
+                top: '50%',
+                left: '50%',
+                right: 'auto',
+                bottom: 'auto',
+                marginRight: '-50%',
+                transform: 'translate(-50%, -50%)',
+                padding: '20px',
+                borderRadius: '10px',
+                maxWidth: '500px',
+                width: '100%'
+              }
+            }}
+          >
+
+            
+            <h2 className="text-2xl font-bold mb-4 text-center">Mais detalhes sobre mim</h2>
+            <button onClick={closeModal} className="absolute top-0 right-0 mt-2 mr-2 text-red-700">
+              ×
+            </button>
+            <p>Sou apaixonado por tecnologia desde que ganhei meu primeiro computador, quando tinha cerca de 7 anos. Sempre tive muita curiosidade sobre esse mundo, 
+              sobre como era feito um computador e como as coisas funcionavam. Devido a isso, decidi seguir a carreira de tecnologia.
+              Alguns hobbies que eu tenho, além da programação, são jogar videogames – jogo desde meus 5/6 anos e sempre amei todo esse universo. 
+              Além disso, gosto muito de cinema e definitivamente sou o maior fã de Godzilla da minha cidade.
+            </p>
+          </ReactModal>
+        </> */}
+
         <section id='Formacao' className='container mx-auto mt-16'>
-            <div className='text-center'>
-              <h2 className='text-3x1 font-bold'>Formação</h2>
-              <p className='text-gray-600'>Minha formação</p>
+            <div>
+              <h2 className='text-3xl font-bold'>Formação Acadêmica</h2>
+            </div>
+            <div className='mt-2 grid grid-cols-2 gap-4'>
+              <div className='col-span-1 mb1'>
+                <img className="rounded-full w-24 h-24" src="mackenzie.png" alt="me"></img>
+                <p className='font-bold'>Universidade Prebiteriana Mackenzie(UPM)</p>
+                <p className='font-bold'>Bacharelado em Ciência da Computação</p>
+                <p>Janeiro de 2020 - Julho de 2024</p>
+                <button onClick={openModal} className='mt-5'>
+                    <Project title={'Contéudo'} details={<p>Durante minha graduação, estudei disciplinas essenciais como Algoritmos e Programação, Circuitos Eletrônicos, e Fundamentos de Ciência da Computação. 
+                      Avancei para áreas como Álgebra Booleana, Estruturas de Dados, Modelagem Matemática, e Organização de Computadores. 
+                      Explorei também Engenharia de Software, Computação Paralela, Redes de Computadores, e Linguagens Formais. 
+                      Além disso, estudei Inteligência Artificial, Ciência de Dados, e interação humano-computador. 
+                      Essas disciplinas me proporcionaram uma base sólida em diversas áreas da computação, preparando-me tanto para desafios técnicos quanto para inovação e empreendedorismo na tecnologia da informação.
+                      </p>}>
+                      </Project>
+                </button>
+              </div>
+              <div className='col-span-1'>
+                <div className='grid grid-cols-2 gap-4'>
+                  <div className='col-span-1 mb1'>
+                    <img className="rounded-full w-24 h-24 border-4 border-purple-500 object-contain" src="cambridge.png" alt="me"></img>
+                    <p className='font-bold text-sm'>B2 First(First Certificate in English)</p>
+                    <p className='text-xs'>Julho de 2018</p>
+                  </div>
+                  <div className='col-span-1'>
+                    <img className="text-center rounded-full w-24 h-24 border-4 border-purple-500 object-contain" src="google.jpg" alt="me"></img>
+                    <p className='font-bold text-sm'>Google Cloud Computing Fundamentals</p>
+                    <p className='text-xs'>Novembro de 2022</p>
+                  </div>
+                  <div className='col-span-1'>
+                    <img className="rounded-full w-24 h-24 border-4 border-purple-500 object-contain" src="udemy.png" alt="me"></img>
+                    <p className='font-bold text-sm'>C# Completo POO + Projetos</p>
+                    <p className='text-xs'>Novembro de 2022</p>
+                  </div>
+                  <div className='col-span-1'>
+                    <img className="rounded-full w-24 h-24 border-4 border-purple-500 object-contain" src="dio.jpg" alt="me"></img>
+                    <p className='font-bold text-sm'>Santander Bootcamp 2023 - Fullstack Java + Angular</p>
+                    <p className='text-xs'>Outubro de 2023</p>
+                  </div>
+                </div>              
+              </div>
             </div>
           </section>
 
@@ -317,22 +429,60 @@ function App() {
             <div className='text-center'>
               <h2 className='text-3x1 font-bold'>Contato</h2>
               <p className='text-gray-600'>Entre em Contato</p>
-              <button></button>
+            </div>
+            <div className='text-center'>
+            <a 
+                href='https://www.linkedin.com/in/viniciusrofifaria/' 
+                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-zinc-950' 
+                target='_blank' 
+                rel='noopener noreferrer'
+              >
+                <i className='fab fa-linkedin-in'></i>
+              </a>
+              <a 
+                href='https://github.com/ViniciusFaria-png' 
+                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-gray-600 hover:bg-zinc-950' 
+                target='_blank' 
+                rel='noopener noreferrer'
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a 
+                href='vinicius.f4ria@gmail.com' 
+                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-red-600 hover:bg-zinc-950' 
+                target='_blank' 
+                rel='noopener noreferrer'
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a 
+                href='https://stackoverflow.com/users/19990372/viga' 
+                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-orange-600 hover:bg-zinc-950' 
+                target='_blank' 
+                rel='noopener noreferrer'
+              >
+                <i class="fa-brands fa-stack-overflow"></i>
+              </a>
+              <a 
+                href='https://medium.com/@tioviga' 
+                className='mx-2 inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-zinc-600 hover:bg-zinc-950' 
+                target='_blank' 
+                rel='noopener noreferrer'
+              >
+                <i class="fa-brands fa-medium"></i>
+              </a>
             </div>
           </section>
           <footer className='bg-gray-800 text-white py-4 text-center relative'>
             <div className='container mx-auto'>
-              <ScrollLink to="Home" smooth={true} duration={500} className="animate-bounce w-12 h-12 cursor-pointer inline-block">
+              <ScrollLink to="Home" smooth={true} duration={800} className="animate-bounce w-12 h-12 cursor-pointer inline-block">
                   <ArrowUpIcon />
               </ScrollLink>
-              <p className='mt-4'></p>
+              <p className='mt-4'>Todos os direitos reservados</p>
             </div>
           </footer>
-            
-
       </main>
     </body>   
   );
 };
-
 export default App;
