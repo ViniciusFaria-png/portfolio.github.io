@@ -1,14 +1,15 @@
 import React from "react";
+import AOSAnimations from '../AOSAnimations/AOSAnimations';
 
 const Skills = () => {
     return (
-        <section id='Skills'className='container mx-auto mt-16 bg-slate-50'>
+        <section id='Skills'className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
             <div className='text-center my-7'>
-              <h2 className='text-3xl font-bold my-5'>Skills</h2>
-              <p className='text-gray-600 my-5'>Algumas habilidades que desenvolvi durante meus estudos</p>
+              <h2 data-aos="fade-up" className='text-3xl font-bold my-5 text-slate-950 dark:text-slate-50'>Skills</h2>
+              <p data-aos="fade-up" className='text-gray-600 my-5 text-slate-950 dark:text-slate-50'>Algumas habilidades que desenvolvi durante meus estudos</p>
               <div className='grid grid-cols-4 gap-4'>
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
-                  <h3 className='font-bold mb-2'>Linguas</h3>
+                <div data-aos="fade-right" className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
+                  <h3 className='font-bold mb-2 text-slate-950 dark:text-slate-50'>Linguas</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Português</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                     <div className="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style={{width: '100%'}}></div>
@@ -23,8 +24,8 @@ const Skills = () => {
                   </div>
                 </div>
 
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
-                  <h3 className='font-bold mb-2'>Front end</h3>
+                <div data-aos="fade-right" className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
+                  <h3 className='font-bold mb-2 text-slate-950 dark:text-slate-50'>Front end</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">HTML|CSS</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                     <div className="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style={{width: '100%'}}></div>
@@ -46,9 +47,10 @@ const Skills = () => {
                     <div className="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style={{width: '50%'}}></div>
                   </div>
                 </div>
+                
 
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
-                  <h3 className='font-bold mb-2'>Back end</h3>
+                <div data-aos="fade-left" className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
+                  <h3 className='font-bold mb-2 text-slate-950 dark:text-slate-50'>Back end</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Python</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                     <div className="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style={{width: '90%'}}></div>
@@ -75,8 +77,8 @@ const Skills = () => {
                   </div>
                 </div>
 
-                <div className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
-                  <h3 className='font-bold mb-2'>Ferramentas</h3>
+                <div data-aos="fade-left" className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
+                  <h3 className='font-bold mb-2 text-slate-950 dark:text-slate-50'>Ferramentas</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Git|Github</div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                     <div className="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style={{width: '100%'}}></div>
