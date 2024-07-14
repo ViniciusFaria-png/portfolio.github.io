@@ -21,7 +21,7 @@ const About = () => {
         <section id='SOBRE'  className='w-full mx-auto bg-slate-50 dark:bg-slate-900'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
             <div className='flex justify-center' data-aos="fade-right">
-              <img className="rounded-full w-96 h-96 mt-5 mb-5 border-4 border-purple-900 shadow-lg shadow-purple-900/50" src="Eu.jpeg" alt="me"></img>
+              <img className="rounded-full w-96 h-96 mt-5 mb-5 border-4 border-purple-900 shadow-lg shadow-purple-900/50" src={require('../../assets/img/Eu.jpeg')} alt="me"></img>
             </div>
             <div className='space-y-4' data-aos="fade-up">
               <p className='font-bold mb-3 text-lg text-slate-950 dark:text-slate-50 md:text-xl'>Desenvolvedor Full Stack, Bacharel em Ciência da Computação pelo Mackenzie, com amplo conhecimento em Python, Django, Java, C#, JavaScript, TypeScript, HTML, CSS, Angular, Vue, Git e bancos de dados</p>

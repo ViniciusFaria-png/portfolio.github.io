@@ -21,7 +21,7 @@ const Education = () => {
             </div>
             <div className='mt-2 grid grid-cols-2 gap-4'>
               <div className='col-span-1 mb1' data-aos="fade-right">
-                <img className="rounded-full w-24 h-24" src="mackenzie.png" alt="me"></img>
+                <img className="rounded-full w-24 h-24" src={require('../../assets/img/mackenzie.png')} alt="me"></img>
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Universidade Prebiteriana Mackenzie(UPM)</p>
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Bacharelado em Ciência da Computação</p>
                 <p className='text-slate-950 dark:text-slate-50'>Janeiro de 2020 - Julho de 2024</p>
@@ -38,22 +38,22 @@ const Education = () => {
               <div className='col-span-1' data-aos="fade-left">
                 <div className='grid grid-cols-2 gap-4'>
                   <div className='col-span-1 mb1'>
-                    <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src="cambridge.png" alt="me"></img>
+                    <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src={require('../../assets/img/cambridge.png')} alt="me"></img>
                     <p className='font-bold text-sm text-slate-950 dark:text-slate-50'>B2 First(First Certificate in English)</p>
                     <p className='text-xs text-slate-950 dark:text-slate-50'>Julho de 2018</p>
                   </div>
                   <div className='col-span-1'>
-                    <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src="google.jpg" alt="me"></img>
+                    <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src={require('../../assets/img/google.jpg')} alt="me"></img>
                     <p className='font-bold text-sm text-slate-950 dark:text-slate-50'>Google Cloud Computing Fundamentals</p>
                     <p className='text-xs text-slate-950 dark:text-slate-50'>Novembro de 2022</p>
                   </div>
                   <div className='col-span-1'>
-                    <img className="rounded-full w-24 h-24 border-2 dark:bg-white border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src="udemy.png" alt="me"></img>
+                    <img className="rounded-full w-24 h-24 border-2 dark:bg-white border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src={require('../../assets/img/udemy.png')} alt="me"></img>
                     <p className='font-bold text-sm text-slate-950 dark:text-slate-50'>C# Completo POO + Projetos</p>
                     <p className='text-xs text-slate-950 dark:text-slate-50'>Novembro de 2022</p>
                   </div>
                   <div className='col-span-1'>
-                    <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src="dio.jpg" alt="me"></img>
+                    <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src={require('../../assets/img/dio.jpg')} alt="me"></img>
                     <p className='font-bold text-sm text-slate-950 dark:text-slate-50'>Santander Bootcamp 2023 - Fullstack Java + Angular</p>
                     <p className='text-xs text-slate-950 dark:text-slate-50'>Outubro de 2023</p>
                   </div>

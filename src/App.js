@@ -38,7 +38,7 @@ function App() {
       
       <div className="relative h-screen overflow-hidden">
         <img
-          src="bg.jpg"
+          src={require('./assets/img/bg.jpg')}
           alt="img-pc"
           className="absolute inset-0 object-cover w-full h-full"
         />

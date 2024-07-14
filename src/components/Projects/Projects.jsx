@@ -11,7 +11,7 @@ const Projects = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
                 <div className='flex justify-center'>
-                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="BerserkApp.png" alt="me"></img>
+                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src={require('../../assets/img/BerserkApp.png')} alt="me"></img>
                 </div>
                 <div className='text-center'>
                   <p className='font-bold text-slate-950 dark:text-slate-50'>Berserk App</p>
@@ -28,7 +28,7 @@ const Projects = () => {
 
               <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
                 <div className='flex justify-center'>
-                  <img className=" rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="GameRental.png" alt="me"></img>
+                  <img className=" rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src={require('../../assets/img/GameRental.png')} alt="me"></img>
                 </div>
                 <div className=''>
                   <p className='font-bold text-slate-950 dark:text-slate-50'>Game Rental Store</p>
@@ -44,7 +44,7 @@ const Projects = () => {
 
               <div className='text-center col-span-1 mb-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative group'>
                 <div className='flex justify-center'>
-                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src="SalesMVC.png" alt="me"></img>
+                  <img className="rounded-lg object-contain  group-hover:opacity-75 transition duration-300" src={require('../../assets/img/SalesMVC.png')}alt="me"></img>
                 </div>
                 <div className=''>
                   <p className='font-bold text-slate-950 dark:text-slate-50' >MVC System Project</p>
