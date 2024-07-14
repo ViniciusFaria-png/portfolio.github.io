@@ -1,18 +1,11 @@
-import React, {useEffect} from "react";
-import AOS from 'aos';
-import'aos/dist/aos.css';
+import React from "react";
+import '../AOSAnimations/AOSAnimations';
 
 
 const Contact = () => {
 
-    useEffect(() => {
-      AOS.init({
-        duration: 1200,
-      });
-    }, []);
-
     return (
-        <section id='Contato'className='mx-auto mt-16 bg-slate-50 dark:bg-slate-900' data-aos="fade-up">
+        <section id='CONTATO'className='mx-auto mt-16 bg-slate-50 dark:bg-slate-900' data-aos="fade-up">
             <div className='mt-5 mx-10 my-10'>
               <h2 className='text-3xl font-bold my-5 text-slate-950 dark:text-slate-50'>Contato</h2>
               <p className='text-gray-600 my-5 text-slate-950 dark:text-slate-50'>Deseja discutir sobre algum projeto ou apenas dizer um olá? entre em contato!!</p>

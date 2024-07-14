@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Project from '../Modal/Project';
-import AOSAnimations from '../AOSAnimations/AOSAnimations';
+import '../AOSAnimations/AOSAnimations';
 
 
 
@@ -15,7 +15,7 @@ const Education = () => {
     };
 
     return (
-        <section id='Formacao' className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
+        <section id='FORMAÇÃO' className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
             <div>
               <h2 data-aos="fade-up" className='text-3xl font-bold text-slate-950 dark:text-slate-50'>Formação Acadêmica</h2>
             </div>

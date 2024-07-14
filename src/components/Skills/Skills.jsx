@@ -1,9 +1,9 @@
 import React from "react";
-import AOSAnimations from '../AOSAnimations/AOSAnimations';
+import '../AOSAnimations/AOSAnimations';
 
 const Skills = () => {
     return (
-        <section id='Skills'className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
+        <section id='SKILLS'className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
             <div className='text-center my-7'>
               <h2 data-aos="fade-up" className='text-3xl font-bold my-5 text-slate-950 dark:text-slate-50'>Skills</h2>
               <p data-aos="fade-up" className='text-gray-600 my-5 text-slate-950 dark:text-slate-50'>Algumas habilidades que desenvolvi durante meus estudos</p>

@@ -35,7 +35,7 @@ const Navbar = () => {
             <a href="http://localhost:3000/" className="flex text-center sm:text-center space-x-3 rtl:space-x-reverse">
             </a>
             <div className="container mx-auto flex justify-around">
-              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium bg-violet-300 border border-transparent rounded-lg bg-transparent-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border md:border-transparent dark:bg-zinc-800 md:dark:bg-zinc-900 dark:border-transparent">
+              <ul className="flex p-4 md:p-2 mt-2 font-medium bg-slate-50 border-2 border-purple-900 rounded-lg bg-transparent-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 dark:bg-slate-900">
                   {['SOBRE', 'FORMAÇÃO', 'SKILLS', 'PROJETOS', 'CONTATO'].map((section, index) => (
                   <li key={index}>
                       <ScrollLink
@@ -49,8 +49,8 @@ const Navbar = () => {
                   </li>
                   ))}
               </ul>
+              <ToggleButton />
             </div>
-            <ToggleButton />
         </div>
       </nav>
     )
