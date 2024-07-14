@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import ReactModal from 'react-modal';
@@ -10,6 +10,8 @@ import Footer from './components/Footer/Footer';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 ReactModal.setAppElement('#root');
@@ -25,6 +27,11 @@ function App() {
     </svg>
   )
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   
   return (
     <body id='Home' className='bg-slate-50 dark:bg-slate-900'>

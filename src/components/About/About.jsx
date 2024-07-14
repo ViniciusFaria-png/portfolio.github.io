@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Project from "../Modal/Project";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import downloadButton from "../DownloadButton/DownloadButton";
