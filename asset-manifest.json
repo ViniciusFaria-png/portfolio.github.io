@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio.github.io/static/css/main.00edf48a.css",
+    "main.js": "/portfolio.github.io/static/js/main.e0b9e8d5.js",
+    "static/js/453.ace21015.chunk.js": "/portfolio.github.io/static/js/453.ace21015.chunk.js",
+    "static/media/BerserkApp.png": "/portfolio.github.io/static/media/BerserkApp.33d440a064d129806144.png",
+    "static/media/GameRental.png": "/portfolio.github.io/static/media/GameRental.72134d1d8be21992c710.png",
+    "static/media/fa-solid-900.ttf": "/portfolio.github.io/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/fa-brands-400.ttf": "/portfolio.github.io/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
+    "static/media/curriculo.pdf": "/portfolio.github.io/static/media/curriculo.a4da9443f118d2115e8b.pdf",
+    "static/media/fa-solid-900.woff2": "/portfolio.github.io/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
+    "static/media/fa-brands-400.woff2": "/portfolio.github.io/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
+    "static/media/Eu.jpeg": "/portfolio.github.io/static/media/Eu.c087b2e6b4df67572387.jpeg",
+    "static/media/bg.jpg": "/portfolio.github.io/static/media/bg.7bf5b9a53e19f1f40543.jpg",
+    "static/media/fa-regular-400.ttf": "/portfolio.github.io/static/media/fa-regular-400.eb91f7b948a42799f678.ttf",
+    "static/media/mackenzie.png": "/portfolio.github.io/static/media/mackenzie.1ed4860bc40a61ba1e51.png",
+    "static/media/SalesMVC.png": "/portfolio.github.io/static/media/SalesMVC.9ce922243889b8bac85f.png",
+    "static/media/fa-regular-400.woff2": "/portfolio.github.io/static/media/fa-regular-400.21cb8f55d8e0c5b89751.woff2",
+    "static/media/udemy.png": "/portfolio.github.io/static/media/udemy.639d0661c4790f4dfe64.png",
+    "static/media/fa-v4compatibility.ttf": "/portfolio.github.io/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
+    "static/media/fa-v4compatibility.woff2": "/portfolio.github.io/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
+    "index.html": "/portfolio.github.io/index.html",
+    "main.00edf48a.css.map": "/portfolio.github.io/static/css/main.00edf48a.css.map",
+    "main.e0b9e8d5.js.map": "/portfolio.github.io/static/js/main.e0b9e8d5.js.map",
+    "453.ace21015.chunk.js.map": "/portfolio.github.io/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00edf48a.css",
+    "static/js/main.e0b9e8d5.js"
+  ]
+}
