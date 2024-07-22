@@ -15,11 +15,11 @@ const Education = () => {
     };
 
     return (
-        <section id='FORMAÇÃO' className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
+        <section id='FORMAÇÃO' className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 lg:p-8'>
             <div>
               <h2 data-aos="fade-up" className='text-3xl font-bold text-slate-950 dark:text-slate-50'>Formação Acadêmica</h2>
             </div>
-            <div className='mt-2 grid grid-cols-2 gap-4'>
+            <div className='mt-2 grid grid-cols-1 md:grid-cols-2 gap-4'>
               <div className='col-span-1 mb1' data-aos="fade-right">
                 <img className="rounded-full w-24 h-24" src={require('../../assets/img/mackenzie.png')} alt="me"></img>
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Universidade Prebiteriana Mackenzie(UPM)</p>

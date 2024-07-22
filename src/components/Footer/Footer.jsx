@@ -10,12 +10,12 @@ const Footer = () => {
       )
 
     return(
-        <footer className='bg-slate-100 dark:bg-slate-950 text-white py-4 text-center relative'>
+        <footer className='bg-slate-800 text-white py-4 text-center relative'>
             <div className='container mx-auto'>
               <ScrollLink to="Home" smooth={true} duration={800} className="animate-bounce w-12 h-12 cursor-pointer inline-block">
                   <ArrowUpIcon />
               </ScrollLink>
-              <p className='mt-4 text-slate-950 dark:text-slate-50'>Todos os direitos reservados</p>
+              <p className='mt-4 text-slate-50'>Todos os direitos reservados</p>
             </div>
           </footer>
     )

@@ -1,13 +1,14 @@
 import React from "react";
 import '../AOSAnimations/AOSAnimations';
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 const Skills = () => {
     return (
-        <section id='SKILLS'className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900'>
+        <section id='SKILLS'className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 lg:p-8'>
             <div className='text-center my-7'>
               <h2 data-aos="fade-up" className='text-3xl font-bold my-5 text-slate-950 dark:text-slate-50'>Skills</h2>
-              <p data-aos="fade-up" className='text-gray-600 my-5 text-slate-950 dark:text-slate-50'>Algumas habilidades que desenvolvi durante meus estudos</p>
-              <div className='grid grid-cols-4 gap-4'>
+              <p data-aos="fade-up" className='my-5 text-slate-950 dark:text-slate-50'>Algumas habilidades que desenvolvi durante meus estudos</p>
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
                 <div data-aos="fade-right" className='col-span-1 mb-1 text-base font-medium text-black-700 dark:text-black-500 border-2 border-purple-900 shadow-lg shadow-purple-900/50 rounded-lg px-4 py-2'>
                   <h3 className='font-bold mb-2 text-slate-950 dark:text-slate-50'>Linguas</h3>
                   <div className="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Português</div>

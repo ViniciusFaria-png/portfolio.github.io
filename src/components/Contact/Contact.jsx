@@ -5,11 +5,11 @@ import '../AOSAnimations/AOSAnimations';
 const Contact = () => {
 
     return (
-        <section id='CONTATO'className='mx-auto mt-16 bg-slate-50 dark:bg-slate-900' data-aos="fade-up">
+        <section id='CONTATO'className='mx-auto mt-16 bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 lg:p-8' data-aos="fade-up">
             <div className='mt-5 mx-10 my-10'>
               <h2 className='text-3xl font-bold my-5 text-slate-950 dark:text-slate-50'>Contato</h2>
-              <p className='text-gray-600 my-5 text-slate-950 dark:text-slate-50'>Deseja discutir sobre algum projeto ou apenas dizer um olá? entre em contato!!</p>
-              <p className='text-gray-600 my-5 text-slate-950 dark:text-slate-50'>São Paulo, Brasil</p>
+              <p className=' my-5 text-slate-950 dark:text-slate-50'>Deseja discutir sobre algum projeto ou apenas dizer um olá? entre em contato!!</p>
+              <p className=' my-5 text-slate-950 dark:text-slate-50'>São Paulo, Brasil</p>
               <a 
                 href='https://www.linkedin.com/in/viniciusrofifaria/' 
                 className='inline-flex items-center justify-center px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-zinc-950' 
