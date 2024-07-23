@@ -6,6 +6,7 @@ const Navbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
 
   const toggleMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -15,6 +16,7 @@ const Navbar = () => {
     if (typeof window !== 'undefined') {
       if (window.scrollY > lastScrollY) {
         setShow(false);
+        setMobileMenuOpen(false);
       } else {
         setShow(true);
       }
@@ -40,7 +42,7 @@ const Navbar = () => {
         </a>
         <div className={`lg:hidden absolute top-0 left-0 m-2 transition-transform duration-500 ${show ? 'translate-y-0' : '-translate-y-full'}`}>
           <button className="relative group" onClick={toggleMenu}>
-            <div className={`relative flex flex-col overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-900 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md`}>
+            <div className={`relative flex flex-col overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-900 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md ${isMobileMenuOpen ? 'animate' : ''}`}>
               <div className="transform transition-all duration-150 overflow-hidden -translate-y-5 group-focus:translate-y-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />

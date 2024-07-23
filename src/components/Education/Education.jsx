@@ -16,11 +16,11 @@ const Education = () => {
 
     return (
         <section id='FORMAÇÃO' className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 lg:p-8'>
-            <div>
-              <h2 data-aos="fade-up" className='text-3xl font-bold text-slate-950 dark:text-slate-50'>Formação Acadêmica</h2>
-            </div>
-            <div className='mt-2 grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <div className='col-span-1 mb1' data-aos="fade-right">
+            <div className='mt-4 grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='col-span-1 mb5' data-aos="fade-right">
+                <h2 
+                className=' mb-5 text-3xl font-bold text-slate-950 dark:text-slate-50'>
+                  Formação Acadêmica</h2>
                 <img className="rounded-full w-24 h-24" src={require('../../assets/img/mackenzie.png')} alt="me"></img>
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Universidade Prebiteriana Mackenzie(UPM)</p>
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Bacharelado em Ciência da Computação</p>
@@ -35,9 +35,13 @@ const Education = () => {
                       </Project>
                 </button>
               </div>
-              <div className='col-span-1' data-aos="fade-left">
+              <div className='col-span-1 mb-1' data-aos="fade-left">
+                <h2 data-aos="fade-up " 
+                  className='mb-5 text-3xl font-bold text-slate-950 dark:text-slate-50'>
+                    Certificações
+                </h2>
                 <div className='grid grid-cols-2 gap-4'>
-                  <div className='col-span-1 mb1'>
+                  <div className='col-span-1 mb-1'>
                     <img className="rounded-full w-24 h-24 border-2 border-purple-900 shadow-lg shadow-purple-900/50 object-contain" src={require('../../assets/img/cambridge.png')} alt="me"></img>
                     <p className='font-bold text-sm text-slate-950 dark:text-slate-50'>B2 First(First Certificate in English)</p>
                     <p className='text-xs text-slate-950 dark:text-slate-50'>Julho de 2018</p>

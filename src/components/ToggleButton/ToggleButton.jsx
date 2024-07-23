@@ -22,7 +22,7 @@ const ToggleButton = () => {
 
   return (
     <>
-      <label className='fixed top-5 right-20 themeSwitcherTwo inline-flex select-none items-center'>
+      <label className='fixed top-5 right-5 themeSwitcherTwo inline-flex select-none items-center'>
         <input
           type='checkbox'
           checked={isChecked}
