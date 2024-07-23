@@ -32,7 +32,7 @@ const About = () => {
                 Baixar CV 
                 <FontAwesomeIcon icon={faDownload} className="ml-2" />
                 </button>
-                <ScrollLink to="Contato" smooth={true} duration={800} className='mx-2 sm:mx-4 relative inline-flex items-center justify-center p-0.5 mb-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md cursor-pointer'>
+                <ScrollLink to="CONTATO" smooth={true} duration={800} className='mx-2 sm:mx-4 relative inline-flex items-center justify-center p-0.5 mb-2 px-4 py-2 border-2 border-purple-900 font-medium text-purple-500 rounded-lg overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:text-white hover:bg-purple-500 duration-300 active:bg-violet-700 shadow-md cursor-pointer'>
                   Contate-me
                 </ScrollLink>
 

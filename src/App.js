@@ -34,7 +34,7 @@ function App() {
   }, []);
   
   return (
-    <body id='Home' className='bg-slate-50 dark:bg-slate-900 '>
+    <div id='Home' className='bg-slate-50 dark:bg-slate-900 overflow-x-hidden'>
       
       <div className="relative h-screen overflow-hidden">
         <img
@@ -45,7 +45,8 @@ function App() {
 
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center sm:text-center justify-center text-white p-4 sm:p-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">"More human than human"</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">"More human than human."</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">Vinícius Faria</h1>
           <h2 className="text-2xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">Bem-Vindo ao Meu Portfolio</h2>
           <ScrollLink to="SOBRE" smooth={true} duration={500} className="animate-bounce w-8 h-8 sm:w-12 sm:h-12 cursor-pointer">
             <ArrowDownIcon />
@@ -63,7 +64,7 @@ function App() {
         <Contact/>
         <Footer/>
       </main>
-    </body>   
+    </div>   
   );
 };
 export default App;

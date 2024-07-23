@@ -22,14 +22,14 @@ const ToggleButton = () => {
 
   return (
     <>
-      <label className='fixed top-5 right-5 themeSwitcherTwo inline-flex select-none items-center'>
+      <label className='fixed top-5 right-20 themeSwitcherTwo inline-flex select-none items-center'>
         <input
           type='checkbox'
           checked={isChecked}
           onChange={handleCheckboxChange}
           className='sr-only'
         />
-        <span className='label flex items-center text-base font-bold text-white dark:text-transparent'>
+        <span className='hidden label md:flex items-center text-base font-bold text-white dark:text-transparent'>
           Light
         </span>
         <span
@@ -43,7 +43,7 @@ const ToggleButton = () => {
             }`}
           ></span>
         </span>
-        <span className='label flex items-center text-base font-bold text-transparent dark:text-white'>
+        <span className='hidden label md:flex items-center text-base font-bold text-transparent dark:text-white'>
           Dark
         </span>
       </label>
