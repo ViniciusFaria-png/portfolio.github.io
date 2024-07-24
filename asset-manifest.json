@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio.github.io/static/css/main.7f51efb7.css",
-    "main.js": "/portfolio.github.io/static/js/main.14d23ec2.js",
+    "main.css": "/portfolio.github.io/static/css/main.96cdf85c.css",
+    "main.js": "/portfolio.github.io/static/js/main.864f69e1.js",
     "static/js/453.ace21015.chunk.js": "/portfolio.github.io/static/js/453.ace21015.chunk.js",
     "static/media/BerserkApp.png": "/portfolio.github.io/static/media/BerserkApp.33d440a064d129806144.png",
     "static/media/GameRental.png": "/portfolio.github.io/static/media/GameRental.72134d1d8be21992c710.png",
     "static/media/fa-solid-900.ttf": "/portfolio.github.io/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
     "static/media/fa-brands-400.ttf": "/portfolio.github.io/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
-    "static/media/curriculo.pdf": "/portfolio.github.io/static/media/curriculo.a4da9443f118d2115e8b.pdf",
+    "static/media/curriculo.pdf": "/portfolio.github.io/static/media/curriculo.79f3db7f0ca59df808e7.pdf",
     "static/media/fa-solid-900.woff2": "/portfolio.github.io/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
     "static/media/fa-brands-400.woff2": "/portfolio.github.io/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
     "static/media/Eu.jpeg": "/portfolio.github.io/static/media/Eu.c087b2e6b4df67572387.jpeg",
@@ -20,12 +20,12 @@
     "static/media/fa-v4compatibility.ttf": "/portfolio.github.io/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/portfolio.github.io/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/portfolio.github.io/index.html",
-    "main.7f51efb7.css.map": "/portfolio.github.io/static/css/main.7f51efb7.css.map",
-    "main.14d23ec2.js.map": "/portfolio.github.io/static/js/main.14d23ec2.js.map",
+    "main.96cdf85c.css.map": "/portfolio.github.io/static/css/main.96cdf85c.css.map",
+    "main.864f69e1.js.map": "/portfolio.github.io/static/js/main.864f69e1.js.map",
     "453.ace21015.chunk.js.map": "/portfolio.github.io/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f51efb7.css",
-    "static/js/main.14d23ec2.js"
+    "static/css/main.96cdf85c.css",
+    "static/js/main.864f69e1.js"
   ]
 }
