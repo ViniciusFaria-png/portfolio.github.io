@@ -56,7 +56,7 @@ const Navbar = () => {
             </div>
           </button>
         </div>
-        <div className="hidden md:flex w-full justify-around">
+        <div className="hidden lg:flex w-full justify-around">
           <ul className="flex text-sm md:text-base p-1 md:p-2 mt-2 font-medium bg-slate-50 border-2 border-purple-900 rounded-lg bg-transparent-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 dark:bg-slate-900">
             {['SOBRE', 'FORMAÇÃO', 'SKILLS', 'PROJETOS', 'CONTATO'].map((section, index) => (
               <li key={index}>
