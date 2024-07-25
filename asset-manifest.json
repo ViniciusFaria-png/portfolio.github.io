@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio.github.io/static/css/main.96cdf85c.css",
-    "main.js": "/portfolio.github.io/static/js/main.864f69e1.js",
+    "main.css": "/portfolio.github.io/static/css/main.a509c859.css",
+    "main.js": "/portfolio.github.io/static/js/main.36b910a0.js",
     "static/js/453.ace21015.chunk.js": "/portfolio.github.io/static/js/453.ace21015.chunk.js",
     "static/media/BerserkApp.png": "/portfolio.github.io/static/media/BerserkApp.33d440a064d129806144.png",
     "static/media/GameRental.png": "/portfolio.github.io/static/media/GameRental.72134d1d8be21992c710.png",
@@ -20,12 +20,12 @@
     "static/media/fa-v4compatibility.ttf": "/portfolio.github.io/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/portfolio.github.io/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/portfolio.github.io/index.html",
-    "main.96cdf85c.css.map": "/portfolio.github.io/static/css/main.96cdf85c.css.map",
-    "main.864f69e1.js.map": "/portfolio.github.io/static/js/main.864f69e1.js.map",
+    "main.a509c859.css.map": "/portfolio.github.io/static/css/main.a509c859.css.map",
+    "main.36b910a0.js.map": "/portfolio.github.io/static/js/main.36b910a0.js.map",
     "453.ace21015.chunk.js.map": "/portfolio.github.io/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96cdf85c.css",
-    "static/js/main.864f69e1.js"
+    "static/css/main.a509c859.css",
+    "static/js/main.36b910a0.js"
   ]
 }
