@@ -20,7 +20,8 @@ Iniciei o desenvolvimento deste projeto com o objetivo de criar um local para ag
 1. **Node.js**: Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo [aqui](https://nodejs.org/).
 2. **npm**: O Node.js já vem com o npm (Node Package Manager) instalado.
 
-## Clonando o Repositório
+## Passo a passo
+1. Clonando o Repositório
 
     ```sh
     git clone <repository-url>
