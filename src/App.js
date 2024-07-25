@@ -20,6 +20,8 @@ ReactModal.setAppElement('#root');
 
 
 
+
+
 function App() {
   const ArrowDownIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-15">
@@ -45,8 +47,7 @@ function App() {
 
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center sm:text-center justify-center text-white p-4 sm:p-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">"More human than human."</h1>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">Vinícius Faria</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mt-8 text-center">"More human than human."</h1>
           <h2 className="text-2xl sm:text-5xl font-bold mb-4 sm:mb-8 text-center">Bem-Vindo ao Meu Portfolio</h2>
           <ScrollLink to="SOBRE" smooth={true} duration={500} className="animate-bounce w-8 h-8 sm:w-12 sm:h-12 cursor-pointer">
             <ArrowDownIcon />
