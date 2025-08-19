@@ -30,7 +30,7 @@ const About = () => {
                   Contate-me
                 </ScrollLink>
 
-                <button onClick={openModal}>
+                <button onClick={() => {}}>
                   <Project title={'Mais detalhes sobre mim'} details={<p>Sou apaixonado por tecnologia desde que ganhei meu primeiro computador, quando tinha cerca de 7 anos. Sempre tive muita curiosidade sobre esse mundo, 
                     sobre como era feito um computador e como as coisas funcionavam. Devido a isso, decidi seguir a carreira de tecnologia.
                     Alguns hobbies que eu tenho, além da programação, são jogar videogames – jogo desde meus 5/6 anos e sempre amei todo esse universo. 
