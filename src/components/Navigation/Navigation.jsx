@@ -25,9 +25,20 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > lastScrollY) {
+          setShow(false);
+          setMobileMenuOpen(false);
+        } else {
+          setShow(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
+
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
-
       return () => {
         window.removeEventListener('scroll', controlNavbar);
       };
