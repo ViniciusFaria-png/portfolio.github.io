@@ -8,11 +8,6 @@ import '../AOSAnimations/AOSAnimations';
 
 const Education = () => {
 
-    const [isModalOpen, setModalOpen] = useState(false);
-
-    const openModal = () => {
-      setModalOpen(true);
-    };
 
     return (
         <section id='FORMAÇÃO' className='container mx-auto mt-16 bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 lg:p-8'>
