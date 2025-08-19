@@ -20,7 +20,7 @@ const Education = () => {
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Universidade Prebiteriana Mackenzie(UPM)</p>
                 <p className='font-bold text-slate-950 dark:text-slate-50'>Bacharelado em Ciência da Computação</p>
                 <p className='text-slate-950 dark:text-slate-50'>Janeiro de 2020 - Julho de 2024</p>
-                <button onClick={openModal} className='mt-5'>
+                <button onClick={() => {}} className='mt-5'>
                     <Project title={'Contéudo'} details={<p>Durante minha graduação, estudei disciplinas essenciais como Algoritmos e Programação, Circuitos Eletrônicos, e Fundamentos de Ciência da Computação. 
                       Avancei para áreas como Álgebra Booleana, Estruturas de Dados, Modelagem Matemática, e Organização de Computadores. 
                       Explorei também Engenharia de Software, Computação Paralela, Redes de Computadores, e Linguagens Formais. 
